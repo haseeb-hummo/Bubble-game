@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Offside&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Offside', cursive;
+  font-family: "Offside", cursive;
 }
 
 /* Set full height and width for HTML and body */
@@ -17,7 +17,7 @@ body {
 .main {
   height: 100%;
   width: 100%;
-  background-color: #FFEECC;
+  background-color: #ffeecc;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +31,7 @@ body {
 
   & .screenTop {
     height: 85px;
-    background-color: #FFDDCC;
+    background-color: #ffddcc;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,12 +46,12 @@ body {
       & .box {
         height: 20px;
         width: 20px;
+        border-radius: 5px;
         background-color: #ffb5b5;
         padding: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 5px;
       }
     }
   }
@@ -66,12 +66,12 @@ body {
   gap: 10px;
   align-items: center;
   justify-content: center;
-  
+
   & .bubble {
     height: 35px;
     width: 35px;
     border-radius: 50%;
-    background-color: #FFD7F1;
+    background-color: #ffd7f1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -79,8 +79,32 @@ body {
     cursor: pointer;
 
     &:hover {
-        background-color: #FAF7E6;
+      background-color: #faf7e6;
+    }
+  }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .gameScreen {
+    .screenTop {
+      padding: 0 10%;
+
+      & .element {
+        margin-top: 10px;
+      }
     }
 
+    .screenBottom {
+      overflow: hidden;
+
+      .bubble {
+        padding: 41px;
+      }
+    }
+  }
+
+  .box {
+    padding: 100px;
   }
 }
