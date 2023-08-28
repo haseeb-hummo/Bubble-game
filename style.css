@@ -64,7 +64,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-
+  align-items: center;
+  justify-content: center;
+  
   & .bubble {
     height: 35px;
     width: 35px;
@@ -74,6 +76,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 30px;
+    cursor: pointer;
 
     &:hover {
         background-color: #FAF7E6;
